@@ -15,12 +15,7 @@ app.use(helmet());
 // CORS configuration
 app.use(
   cors({
-    origin: config.nodeEnv === 'development' 
-      ? '*' 
-      : [
-          'https://dqzod4lh9g28k.cloudfront.net',
-          'http://tradesim-frontend-kreesh.s3-website.ca-central-1.amazonaws.com'
-        ],
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-User-Id', 'X-User-Email'],
   })
